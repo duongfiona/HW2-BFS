@@ -1,3 +1,11 @@
+# Breadth First Search Overview
+Breadth first search (BFS) is one type of graph search algorithm. In BFS, the nodes closest to the start node are explored first. Then, the neighbors of those start-adjacent nodes are explored, and so on. The algorithm systematically traverses through the graph layer by layer until the entire connected network has been visited, or a given end node has been found. 
+
+Unlike Depth First Search (DFS), which utilizes a stack data structure to traverse through a graph one full path at a time, BFS utilizes a queue data structure to enable us to visit nodes in order of increasing distance from the start node. 
+
+---
+
+# ARCHIVED INSTRUCTIONS
 # Assignment 2
 Breadth-first search
 
