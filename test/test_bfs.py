@@ -44,12 +44,21 @@ def test_bfs():
     test_output = g.bfs(test_start, test_end)
     correct_output = nx.shortest_path(g.graph, test_start, test_end)
 
-    assert test_output == correct_output
+    # check if path length is shortest path
+    assert len(test_output) == len(correct_output)
+
+    # check that the path is a valid path (there could be many shortest path options)
+    assert nx.is_path(g.graph, test_output)
+
+    # check that the start and end nodes are correct
+    assert test_output[0] == correct_output[0] == test_start
+    assert test_output[-1] == correct_output[-1] == test_end
+
 
     # assert that nodes that are not connected returns None
     bad_start = "Reza Abbasi-Asl"
     bad_end = "Tony Capra"
-    assert g.bfs(test_start, bad_end) is None
+    assert g.bfs(bad_start, bad_end) is None
 
 def test_bfs_empty():
     """
