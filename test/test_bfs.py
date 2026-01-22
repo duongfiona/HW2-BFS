@@ -19,7 +19,7 @@ def test_bfs_traversal():
     correct_output = list(nx.bfs_tree(g.graph, source=test_start))
 
     # assert that right number of nodes returned
-    assert len(test_output) == len(g)
+    assert len(test_output) == len(correct_output)
     
     # assert that right order of nodes returned
     assert test_output == correct_output
