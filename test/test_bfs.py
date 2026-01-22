@@ -38,7 +38,7 @@ def test_bfs():
     g = graph.Graph("data/citation_network.adjlist")
 
     # assert that correct shortest path is returned for connected nodes
-    test_start =" Nadav Ahituv"
+    test_start = "Nadav Ahituv"
     test_end = "Tony Capra"
 
     test_output = g.bfs(test_start, test_end)
